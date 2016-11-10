@@ -1,0 +1,15 @@
+
+
+.header {
+  height: 140px;
+  border-bottom: 6px solid $pelorous;
+
+  &__logo {
+    float: left;
+    margin-top: 35px;
+  }
+
+  &__menu {
+    float: right;
+  }
+}

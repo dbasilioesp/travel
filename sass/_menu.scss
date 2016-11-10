@@ -1,0 +1,93 @@
+
+.menu-desk {
+
+  &__list {
+    margin-top: 45px;
+    margin-left: 0;
+    list-style: none;
+    
+    li, a {
+      display: inline-block;
+    }
+    
+    // First Item
+    & > .menu-item {
+      float: left;
+
+      & > a {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 22px 25px;
+        line-height: 1;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        color: $doveGray;
+        min-width: 160px;
+      }
+    }
+
+    & > .menu-item.dropdown {
+      position: relative;
+
+      & > a {
+        &::after {
+          content: "";
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 10px;
+          width: 20px;
+          height: 20px;
+          background: url("../images/svg/arrow-down.svg") no-repeat;
+        }
+      }
+
+      &:hover {
+        & > a {
+          border: 1px solid $alto;
+          border-bottom: 0;
+          color: $pelorous;
+        }
+
+        .dropdown-menu {
+          opacity: 1;
+          display: block;
+          z-index: 1;
+          pointer-events: auto;
+        }
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        width: 100%;
+        top: 88%;
+        left: 0;
+        background: white;
+        border: 1px solid $alto;
+        border-top: 0;
+        margin-left: 0;
+        padding-bottom: 12px;
+        z-index: -1;
+        opacity: 0;
+        transition: all 600ms $easeOutCirc;
+        pointer-events: none;
+
+        li, a {
+          display: block;
+        }
+        
+        a {
+          font-size: 14px;
+          padding: 8px 22px;
+          line-height: 1.4;
+          color: $doveGray;
+
+          &:hover, &:focus {
+            color: $pelorous;
+          }
+        }
+      }
+    }
+  }
+}
