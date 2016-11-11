@@ -17,9 +17,10 @@ Agora é só inicializar o servidor web e visualizar a página pela url http://l
 	grunt
 
 
-## Styles
+## Styles & Scripts
 
-O arquivo _app.css_ não é incluido no versionamento do projeto, por isso é preciso compilar os arquivos de Sass com os seguintes comandos:
+Os arquivos _app.css_  e __app.js__ não são incluidos no versionamento do projeto, por isso é preciso gerá-los com os seguintes comandos:
 
     grunt sass
     grunt postcss
+    grunt uglify
