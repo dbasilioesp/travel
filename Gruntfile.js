@@ -9,6 +9,10 @@ module.exports = function(grunt) {
         sass: {
             files: ["sass/*.scss"],  
             tasks: ['sass', 'postcss'],
+        },
+        js: {
+            files: ["js/*.js", "js/includes/*.js"],
+            tasks: ['uglify'],
         }
     },
 
@@ -41,11 +45,23 @@ module.exports = function(grunt) {
         dist: {
             src: 'css/app.css'
         }
+    },
+
+    uglify: {
+        dev: {
+            options: {
+                sourceMap: true
+            },
+            files: {
+                'js/app.js': ['js/includes/*.js', 'js/main.js']
+            }
+        }
     }
 
   });
 
   grunt.loadNpmTasks("grunt-contrib-connect");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-postcss");
   grunt.loadNpmTasks("grunt-sass");
