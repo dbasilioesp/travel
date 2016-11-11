@@ -42,6 +42,12 @@ h6 {
   margin-bottom: 60px;
 }
 
+.third-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: 22px;
+}
+
 .section-roof {
   @supports (clip-path: polygon(100% 35%, 0% 100%, 100% 100%)) {
     position: relative;
@@ -79,5 +85,21 @@ h6 {
     background: $pelorous;
     display: block;
     margin: 8px auto 0;
+  }
+}
+
+.hatch-image {
+  width: 247px;
+  height: 247px;
+  border-radius: 50%;
+  border: 6px solid $pelorous;
+  padding: 6px;
+  overflow: hidden;
+  margin: 0 auto 25px;
+
+  img {  
+    width: 224px;
+    height: 224px;
+    border-radius: 50%;
   }
 }

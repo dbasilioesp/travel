@@ -49,4 +49,14 @@
 
 .offers-section {
   padding-bottom: 120px;
+
+  .offer-box {
+    max-width: 250px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $break-max-large) {
+      margin-bottom: 60px;
+    }
+  }
+
 }
