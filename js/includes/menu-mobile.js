@@ -6,8 +6,7 @@
 
 
 // Responsive Menu
-// $(document).ready(function () {
-window.onload = function(){
+var TravelMenuMobile = function(){
 
   var bodyElement = document.querySelector('body');
   var menuMobile = document.querySelector('.menu-mobile');
@@ -31,11 +30,13 @@ window.onload = function(){
   function closeMenu(){
     bodyElement.classList.remove('active-responsive');
     menuMobile.classList.remove('open');
+    hamburgerIcon.classList.remove('open');
   }
 
   function openMenu(){
     bodyElement.classList.add('active-responsive');
     menuMobile.classList.add('open');
+    hamburgerIcon.classList.add('open');
   }
 
   (function submenuDropdown(){
@@ -86,4 +87,3 @@ window.onload = function(){
   })();
   
 };
-// });

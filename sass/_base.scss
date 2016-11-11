@@ -15,6 +15,12 @@ h6 {
 .wrapper {
   height: 100%;
   position: relative;
+  overflow: hidden;
+  padding-bottom: 250px;
+
+  @media only screen and (min-width: $break-footer) {
+    padding-bottom: 70px;
+  }
 }
 
 .main {

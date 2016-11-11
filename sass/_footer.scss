@@ -1,0 +1,103 @@
+/**
+*
+*  Footer
+*
+**/
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: white;
+  padding: 24px 25px;
+  font-family: 'Lato', 'Roboto', sans-serif;
+  font-weight: 300;
+  overflow: hidden;
+  height: 250px;
+
+  @media only screen and (min-width: $break-footer) {
+    height: 70px;
+  }
+
+  .social-media {
+    @media only screen and (min-width: $break-footer) {
+      float: left;
+    }
+
+    .social-media__item {
+      font-size: 14px;
+      color: $doveGray;
+      text-align: left;
+      margin-bottom: 16px;
+      transition: color 500ms $easeOutCirc;
+      display: block;
+      width: 100%;
+      max-width: 100px;
+
+      @media only screen and (min-width: $break-footer) {
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+
+      svg {
+        fill: $doveGray;
+        vertical-align: middle;
+        transition: fill 500ms $easeOutCirc;
+      }
+
+      span {
+        vertical-align: middle;
+      }
+
+      &:hover, &:focus {
+        color: $pelorous;
+
+        svg {
+          fill: $pelorous;
+        }
+      }
+
+      &.social-media__item--facebook {
+        svg {
+          margin-right: 2px;
+        }
+      }
+
+      &.social-media__item--instagram {
+        svg {
+          margin-right: 6px;
+        }
+      }
+
+      &.social-media__item--twitter {
+        svg {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 12px;
+    margin-top: 30px;
+
+    @media only screen and (min-width: $break-footer) {
+      margin-top: 5px;
+      float: right;
+    }
+
+    img {
+      display: block;
+      margin-top: 15px;
+
+      @media only screen and (min-width: $break-footer) {
+        margin-left: 8px;
+        margin-top: 0;
+        display: inline;
+      }
+    }
+  }
+}
