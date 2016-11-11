@@ -31,6 +31,21 @@
       border: 8px solid white;
       color: white;
       display: inline-block;
+
+      @media only screen and (max-width: $break-max-large) {
+        font-size: 40px;
+        padding: 20px 35px;
+      }
+
+      @media only screen and (max-width: $break-max-medium) {
+        font-size: 30px;
+        padding: 20px 35px;
+      }
+
+      @media only screen and (max-width: $break-max-small) {
+        padding: 20px;
+        margin-top: 100px;
+      }
     }
 
     .slick-item__resume {
