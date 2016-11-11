@@ -1,3 +1,8 @@
+/**
+*
+*    Main JS
+*
+**/
 
 window.onload = function() {
 
