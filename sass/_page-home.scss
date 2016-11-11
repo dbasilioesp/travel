@@ -2,17 +2,7 @@
 .slider-section {
 
   .slick-banner {
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: -145px;
-      height: 245px;
-      background: $cararra;
-      width: 130%;
-      transform: rotate(-5deg) translateX(-10%);
-    }
-
+    
     .slick-item--banner1 {
       background-image: url("../images/layout/banner1.jpg");
     }
@@ -58,5 +48,5 @@
 }
 
 .offers-section {
-  height: 300px;
+  padding-bottom: 120px;
 }
