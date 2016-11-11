@@ -11,3 +11,14 @@ $alto: #DDDDDD;
 // Easings
 
 $easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+
+// Breakpoints
+
+$break-min-small: 40em;
+$break-min-medium: 64em;
+$break-min-large: 75em;
+
+$break-max-small: 39.9375em;
+$break-max-medium: 63.9375em;
+$break-max-large: 74.9375em;
