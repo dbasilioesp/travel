@@ -1,0 +1,65 @@
+
+// Slick Carousel
+
+.slick-slider.slick-banner {
+  position: relative;
+  height: 640px;
+  
+  &:focus {
+    .slick-track {
+      outline: transparent;
+    }
+  }
+
+  .slick-list {
+    outline: none !important;
+    height: 100%;
+  }
+
+  .slick-track {
+    height: 100%;
+  }
+
+  .slick-item {
+    text-align: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+
+  .slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+
+    svg {
+      fill: white;
+    }
+  }
+
+  .slick-prev {
+    left: 25px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .slick-next {
+    right: 25px;
+  }
+
+}

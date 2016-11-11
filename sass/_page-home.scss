@@ -1,0 +1,49 @@
+
+.slider-section {
+
+  .slick-banner {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -145px;
+      height: 245px;
+      background: $cararra;
+      width: 130%;
+      transform: rotate(-5deg) translateX(-10%);
+    }
+
+    .slick-item--banner1 {
+      background-image: url("../images/layout/banner1.jpg");
+    }
+
+    .slick-item--banner2 {
+      background-image: url("../images/layout/banner2.jpg");
+    }
+
+    .slick-item__title {
+      margin-top: 125px;
+      margin-bottom: 20px;
+      padding: 40px 70px;
+      font-size: 60px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: 8px solid white;
+      color: white;
+      display: inline-block;
+    }
+
+    .slick-item__resume {
+      font-size: 16px;
+      font-weight: 300;
+      max-width: 425px;
+      margin: 10px auto 0;
+      color: white;
+    }
+  }
+
+}
+
+.offers-section {
+  height: 300px;
+}
