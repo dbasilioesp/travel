@@ -48,15 +48,45 @@
 }
 
 .offers-section {
-  padding-bottom: 120px;
-
   .offer-box {
     max-width: 250px;
     margin: 0 auto;
 
-    @media only screen and (max-width: $break-max-large) {
+    @media only screen and (max-width: $break-max-small) {
       margin-bottom: 60px;
     }
   }
 
+  .offer-row .columns:last-child {
+    .offer-box {
+      @media only screen and (max-width: $break-max-small) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+.accommodation-section {
+  padding-bottom: 120px;
+
+  .accommodation-box {
+    margin-top: 15px;
+
+    @media only screen and (max-width: $break-max-medium) {
+      text-align: center;
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+    }
+  }
+
+  .third-title {
+    margin-bottom: 0.8rem;
+  }
+
+  .button--accommodation {
+    margin-top: 25px;
+  }
 }

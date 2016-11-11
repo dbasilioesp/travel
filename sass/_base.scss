@@ -31,7 +31,41 @@ h6 {
 }
 
 .section {
-  padding-top: 35px;
+  padding-top: 70px;
+  padding-bottom: 40px;
+
+  @media only screen and (max-width: $break-max-medium) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &.section-roof {
+    @supports (clip-path: polygon(100% 35%, 0% 100%, 100% 100%)) {
+      padding-top: 35px;
+      position: relative;
+      z-index: 1;
+      
+      &::before {
+        content: "";
+        display: block;
+        margin-top: -205px;
+        margin-bottom: 40px;
+        height: 170px;
+        background: $cararra;
+        width: 100%;
+        z-index: -1;
+        clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+
+        @media only screen and (max-width: $break-max-large) {
+          clip-path: polygon(100% 5%, 0% 100%, 100% 100%);
+        }
+        
+        @media only screen and (max-width: $break-max-medium) {
+          clip-path: polygon(100% 45%, 0% 100%, 100% 100%);
+        }
+      }
+    }
+  }
 }
 
 .section-title {
@@ -40,39 +74,14 @@ h6 {
   text-align: center;
   font-weight: bold;
   margin-bottom: 60px;
+  padding: 0 10px;
 }
 
 .third-title {
   text-transform: uppercase;
   font-weight: bold;
-  font-style: 22px;
-}
-
-.section-roof {
-  @supports (clip-path: polygon(100% 35%, 0% 100%, 100% 100%)) {
-    position: relative;
-    z-index: 1;
-    
-    &::before {
-      content: "";
-      display: block;
-      margin-top: -205px;
-      margin-bottom: 40px;
-      height: 170px;
-      background: $cararra;
-      width: 100%;
-      z-index: -1;
-      clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
-
-      @media only screen and (max-width: $break-max-large) {
-        clip-path: polygon(100% 5%, 0% 100%, 100% 100%);
-      }
-      
-      @media only screen and (max-width: $break-max-medium) {
-        clip-path: polygon(100% 45%, 0% 100%, 100% 100%);
-      }
-    }
-  }
+  font-size: 22px;
+  margin-bottom: 0.6rem;
 }
 
 .necktie {
@@ -85,6 +94,12 @@ h6 {
     background: $pelorous;
     display: block;
     margin: 8px auto 0;
+  }
+
+  &.necktie--green {
+    &::after {
+      background: $conifier;
+    }
   }
 }
 
@@ -101,5 +116,31 @@ h6 {
     width: 224px;
     height: 224px;
     border-radius: 50%;
+  }
+}
+
+
+.button {
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 13.5px 21px;
+  margin: 0 0 1rem 0;
+  background-color: $conifier;
+  font-family: 'Roboto Slab', 'Roboto', serif;
+  font-size: 11px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+
+  &:hover, &:focus {
+    background: darken($conifier, 15%);
+    color: white;
   }
 }
